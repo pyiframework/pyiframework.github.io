@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Pyi Framework - coming soon</title>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/simpletextrotator.css" />
+
+</head>
 <body>
-  <div align="center" style="width:1200px; background-color:#E2E2E2; font-size:17px; color:#333333; border:0 1px 0 1px solid #CCCCCC;">
+  <div id="header">
+    <p>PYI FRAMEWORK</p>
+  </div>
+  <div class="main-wrap">
     <h1>Hello, World!</h1>
-    <p>The Pyi Framework is hosted with GitHub Pages. This is just a placeholder. Frankly I'm not sure what you're doing here but that's none of my business.</p>
-    <p>You probably wanted the <a href="http://pyiframework.github.io/pyiframework">Pyi Framework</a> but ended up here instead.</p>
-    <br />
-    <p>Fair warning. We’re gonna try and collapse three-dimensional space during the installation. It hasn't worked yet and we’re not gonna tell you when. Just give us a holler if everything starts looking flat.</p>
+    <p>The Pyi Framework is coming soon. This is just a placeholder for now.</p>
+    <p>Frankly I'm not sure what you're doing here but that's none of my business.</p>
+    <p>You probably wanted the <a href="http://pyiframework.github.io/pyiframework">Pyi Framework</a> on GitHub but ended up here.</p>
+    <hr />
+
+		<div class="container">
+    <div class="main">
+      <p><strong>Fair warning.</strong> We're gonna try <span class="rotate1">to collapse three</span>-dimensional space during the <span class="rotate2">installation. We</span>'re not gonna tell you when. Just know it's working if things st<span class="rotate3">art looking flat.</span></p>
+    </div>
+  </div><!-- Container -->
+
+<script type="text/javascript">
+    $(".rotate1").textrotator({
+      animation: "flipUp",
+      separator: "|",
+      speed: 5000
+    });
+</script>
+
+<script type="text/javascript">
+    $(".rotate2").textrotator({
+      animation: "flipUp",
+      separator: "|",
+      speed: 11000
+    });
+</script>
+
+<script type="text/javascript">
+    $(".rotate3").textrotator({
+      animation: "flipUp",
+      separator: "|",
+      speed: 3500
+    });
+</script>
+
   </div>
 </body>
 </html>
