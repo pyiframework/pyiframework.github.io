@@ -1,0 +1,49 @@
+
+
+############################
+# Pyi Framework Default - htaccess
+# v1.0.0
+# Last Updated: July 08 2015
+# Pyi Framework: http://pyiframework.github.io
+# Twitter: @PyiFramework
+# Author: Kevin Pybus - http://KevinPybus.com
+# Twitter: @KevinPybus
+############################
+
+#############################
+
+#### Options
+Options +FollowSymLinks -MultiViews -Indexes
+
+#### Add a slash after a directory
+DirectorySlash On
+
+#### Hide the directory contents and serves index.php instead
+DirectoryIndex index.php
+
+#### Turn RewriteEngine on
+RewriteEngine on
+
+#############################
+
+#### #IMPORTANT - Set install folder location. If installing in a root directory you're all set, leave it as is - empty. If installing in a subdirectory, add the subdirectory name with no trailing slash. Example: SetEnv ROOT_PATH /yoursubdirectoryname
+
+SetEnv ROOT_PATH
+
+#############################
+
+#### OPTIONAL - DISABLED BY DEFAULT - Uncomment to enable - 301 redirect www.site.com to site.com
+
+# RewriteCond %{HTTP_HOST} ^www\.SITE\.com$
+# RewriteRule ^/?$ "http\:\/\/SITE\.com\/" [L,R=301]
+
+#############################
+
+#### OPTIONAL - DISABLED BY DEFAULT - Uncomment to enable - Drops .php page extensions. example: /about/location.php becomes /about/location
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}.php -f
+# RewriteRule ^(.+)$ $1.php [L,QSA]
+
+#############################
