@@ -1,237 +1,50 @@
 
-/*
-Pyi Framework Default - stylesheet
-v1.0.0
-Last Updated: July 08 2015
-Pyi Framework: http://pyiframework.github.io
-Twitter: @PyiFramework
-Author: Kevin Pybus - http://KevinPybus.com
-Twitter: @KevinPybus
-*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
-/* ----- Import Fonts ----- */
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400);
-
-/*
---
-NOTE: IE 7 and 8 can create some faux weight and styles with grouped Google Web Fonts.
-If you're concerned about this you can comment out the @import and add the
-code below to the top of your header.php instead.
-Otherwise leave it as is.
-See: http://www.smashingmagazine.com/2012/07/11/avoiding-faux-weights-styles-google-web-fonts/
---
-
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400" rel="stylesheet" type="text/css">
-<!--[if IE]>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:700italic" rel="stylesheet" type="text/css">
-<![endif]-->
-
-*/
-
-
-/* ----- Reset browser default styling ----- */
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size:100%; /* comment to use browser default font sizes instead of resetting to 100% */
-    vertical-align: baseline;
-    background: transparent;
+body, html {
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      background: #E2E2E2;
+      text-align: center;
+      height: 100%;
+      font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
 }
 
-body {
-    line-height: 1;
-		background: #e9e9e9; /* set background color */
+body .header{
+  color: #FFFFFF;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display: block;
+#header {
+  width:100%;
+  margin:100px 0 0 0;
+  padding:0;
+  text-align:center;
 }
 
-nav ul {
-    list-style: none;
+#header p {
+  margin:0 0 50px 0;
+  padding:0;
+  font-size:100px;
+  font-weight:bold;
+  color:#333333;
 }
 
-blockquote, q {
-    quotes: none;
+.main-wrap {
+  width:70%;
+  margin:0 auto;
+  padding:10px 40px 80px 40px;
+  background-color:#F2F2F2;
+  font-size:18px;
+  color:#333333;
+  border:1px solid #CCCCCC;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-/* edit colors as needed */
-ins {
-    background-color: #ff9ff9;
-    color: #000000;
-    text-decoration: none;
-}
-
-/* edit colors as needed */
-mark {
-    background-color:# ff9ff9;
-    color: #000000;
-    font-style: italic;
-    font-weight: bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* edit border color as needed */
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-input, select {
-    vertical-align: middle;
-}
-
-/* ----- Default Text Tags ----- */
-
-/* generic text tags */
-font, p, span {
-	font-size: 17px;
-	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
-}
-
-/* p tags */
-p {
-  margin: 10px 0px 10px 0px;
-}
-
-/* h tags */
-h1 {
-  font-size: 32px;
-  margin: 20px 0px 10px 0px;
-}
-
-h2 {
-  font-size: 24px;
-  margin: 20px 0px 10px 0px;
-}
-
-h3 {
-  font-size: 18px;
-  margin: 20px 0px 10px 0px;
-}
-
-h4 {
-  font-size: 15px;
-  margin: 20px 0px 10px 0px;
-}
-
-h5 {
-  font-size: 13px;
-  margin: 20px 0px 10px 0px;
-}
-
-h6 {
-  font-size: 10px;
-  margin: 20px 0px 10px 0px;
-}
-
-/* ----- Styles ----- */
-
-/* wrappers */
-.wrap-header {
-  width: 1200px;
-  height: 100px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-}
-
-.wrap-top-nav {
+.container {
+  float: left;
   width: 100%;
-  margin: 0 auto;
-  padding:10px;
-  text-align: center;
-  border:1px solid #000000;
+  height: 100%;
 }
 
-.wrap-main {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.wrap-footer {
-  width: 1200px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  border-top: 1px solid #333333;
-}
-
-/* lists */
-ul {
-  margin: 20px 0px 20px 0px;
-}
-
-li {
-  margin: 4px 0px 4px 20px;
-  font-size: 17px;
-}
-
-/* ----- Custom Styles ----- */
-
-.logo-pyi-img  {
-  height: 80px;
-  border:0px solid black;
-}
-
-.logo-pyi  {
-  width: 640px;
-  height: 80px;
-  margin: 0px 20px 0px 0px;
-  font-weight: bold;
-  font-size: 70px;
-  font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
-  border:0px solid black;
+.main {
+  font-size: 15px;
 }
